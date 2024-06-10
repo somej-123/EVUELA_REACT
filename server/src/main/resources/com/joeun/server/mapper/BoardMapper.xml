@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.joeun.server.mapper.BoardMapper">
+
+    <!-- Users 매핑-->
+    <resultMap type="Board" id="boardMap">
+        <id property="boardIdx" column="board_idx" />
+        
+        <result property="boardIdx" column="board_idx" />
+        <result property="title" column="title" />
+        <result property="contents" column="contents" />
+        <result property="hitCnt" column="hit_cnt" />
+        <result property="creatorId" column="creator_id" />
+        <result property="updaterId" column="updater_id" />
+        <result property="deletedYn" column="deleted_yn" />
+
+    </resultMap>
+        
+
+
+    <!-- 회원 조회 -->
+    <select id="selectBoardList" resultMap="boardMap">
+        SELECT *
+        FROM t_board
+    </select>
+
+    <insert id="insertBoardContents" parameterType="com.joeun.server.dto.Board">
+        INSERT INTO t_board
+        (
+            title,
+            contents,
+            hit_cnt,
+            creator_id,
+            updater_id,
+            deleted_yn
+        )VALUES(
+            #{title},
+            #{contents},
+            0,
+            'test',
+            'test',
+            'Y'
+        )
+    </insert>
+
+    <delete id="deleteBoardContents" parameterType="com.joeun.server.dto.Board">
+        DELETE FROM t_board
+         WHERE board_idx = #{boardIdx}
+    </delete>
+
+    <update id="modifyBoardContents" parameterType="com.joeun.server.dto.Board">
+        UPDATE t_board 
+           SET
+                title = #{title},
+                contents = #{contents},
+                updated_datetime = now()
+         WHERE  board_idx = #{boardIdx}
+    </update>
+
+
+
+
+
+    
+</mapper>
