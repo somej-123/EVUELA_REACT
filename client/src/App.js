@@ -14,6 +14,9 @@ import BoardWrite from './pages/BoardWrite';
 import MainPractice from './practice/MainPractice';
 import RandomText from './practice/RandomText';
 import MySelectComponent from './pages/Sample';
+import MainHomePage from "./homepagetest/MainHomePage";
+import MainBoard from './homepagetest/board/MainBoard';
+import TestZustand from './homepagetest/testzustand/TestZustand';
 
 const App = () => {
   return (
@@ -33,6 +36,13 @@ const App = () => {
           <Route path="/randomText" element={<RandomText/>}/>
           {/* sample */}
           <Route path="/sample" element={<MySelectComponent/>}/>
+          {/* 홈페이지 만들기 예제 */}
+          <Route path="/mainhomepage" element={<MainHomePage/>}/>
+          {/* 게시판 만들기 */}
+          <Route path="/mainboard" element={<MainBoard/>}/>
+          {/* zustand 연습 */}
+          <Route path="/testzustand" element={<TestZustand/>}/>
+          {/* 홈페이지 만들기 예제 끝 */}
         </Routes>
       </LoginContextProvider>
     </BrowserRouter>

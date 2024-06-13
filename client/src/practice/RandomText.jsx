@@ -6,18 +6,18 @@ const RandomText = ({displayStatus})=>{
 
     console.log("화면 : " + displayStatus);
 
-    // useEffect(() => {
-    //     const fetchData = async () => {
-    //       try {
-    //         const data = await auth.randomTextContents();
-    //         console.log(data);
-    //       } catch (error) {
-    //         console.error('Error fetching data:', error.message);
-    //       }
-    //     };
+    useEffect(() => {
+        const fetchData = async () => {
+          try {
+            const data = await auth.randomTextContents();
+            console.log(data);
+          } catch (error) {
+            console.error('Error fetching data:', error.message);
+          }
+        };
     
-    //     fetchData();
-    //   }, []);
+        fetchData();
+      }, []);
 
     return (
         <>

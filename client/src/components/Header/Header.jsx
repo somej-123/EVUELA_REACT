@@ -27,6 +27,7 @@ const Header = () => {
                 {/* 로그인 여부에 따라 조건부 랜더링 */}
                 { !isLogin ? 
                   <>
+                    <li><Link to="/mainhomepage" style={styles}>메인페이지</Link></li>
                     <li><Link to="/login" style={styles}>로그인</Link></li>
                     <li><Link to="/join" style={styles}>회원가입</Link></li>
                     <li><Link to="/about" style={styles}>소개</Link></li>
@@ -37,6 +38,7 @@ const Header = () => {
                   </>
                 :
                   <>
+                    <li><Link to="/mainhomepage" style={styles}>메인페이지</Link></li>
                     <li><Link to="/user" style={styles}>마이페이지({userInfo.userId})</Link></li>
                     <li><Link to="/admin" style={styles}>관리자</Link></li>
                     <li><Link to="/board" style={styles}>게시판</Link></li>
