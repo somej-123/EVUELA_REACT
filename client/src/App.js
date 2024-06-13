@@ -13,6 +13,7 @@ import Board from './pages/Board';
 import BoardWrite from './pages/BoardWrite';
 import MainPractice from './practice/MainPractice';
 import RandomText from './practice/RandomText';
+import MySelectComponent from './pages/Sample';
 
 const App = () => {
   return (
@@ -30,6 +31,8 @@ const App = () => {
           {/* 연습장 */}
           <Route path="/mainPractice" element={<MainPractice/>}/>
           <Route path="/randomText" element={<RandomText/>}/>
+          {/* sample */}
+          <Route path="/sample" element={<MySelectComponent/>}/>
         </Routes>
       </LoginContextProvider>
     </BrowserRouter>

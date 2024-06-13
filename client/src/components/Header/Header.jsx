@@ -33,6 +33,7 @@ const Header = () => {
                     <li><Link to="/admin" style={styles}>관리자</Link></li>
                     <li><Link to="/board" style={styles}>게시판</Link></li>
                     <li><Link to="/mainPractice" style={styles}>연습장</Link></li>
+                    <li><Link to="/sample" style={styles}>예제</Link></li>
                   </>
                 :
                   <>
@@ -40,6 +41,7 @@ const Header = () => {
                     <li><Link to="/admin" style={styles}>관리자</Link></li>
                     <li><Link to="/board" style={styles}>게시판</Link></li>
                     <li><Link to="/mainPractice" style={styles}>연습장</Link></li>
+                    <li><Link to="/sample" style={styles}>예제</Link></li>
                     <li><button className='link' onClick={ () => logout() }>로그아웃</button></li>
                   </>
                 }
