@@ -29,25 +29,25 @@ export const removeBoardContents = (idx) => api.post(`/board/removeContents`, id
 export const updateBoardContents = (contents) => api.post(`/board/updateContents`, contents);
 
 // 랜덤 텍스트 가져오기 (헤더 포함)
-export const randomTextContents = async () => {
-    try {
-      const response = await api.get("https://api.api-ninjas.com/v1/loremipsum?paragraphs=2", {
-        headers: {
-          'X-Api-Key': '8f/1SRNaNYWuRdeUcmK46g==oazSCSdRp1TXcsXV',
-          'Content-Type': 'application/json',
-        }
-      });
-      console.log(response.data);
-      return response.data;
-    } catch (error) {
-      console.error('Error fetching data:', error.message);
-      if (error.response) {
-        console.error('Response data:', error.response.data);
-        console.error('Response status:', error.response.status);
-        console.error('Response headers:', error.response.headers);
-      }
-      throw error;
-    }
-  };
+// export const randomTextContents = async () => {
+//     try {
+//       const response = await api.get("https://api.api-ninjas.com/v1/loremipsum?paragraphs=2", {
+//         headers: {
+//           'X-Api-Key': '8f/1SRNaNYWuRdeUcmK46g==oazSCSdRp1TXcsXV',
+//           'Content-Type': 'application/json',
+//         }
+//       });
+//       console.log(response.data);
+//       return response.data;
+//     } catch (error) {
+//       console.error('Error fetching data:', error.message);
+//       if (error.response) {
+//         console.error('Response data:', error.response.data);
+//         console.error('Response status:', error.response.status);
+//         console.error('Response headers:', error.response.headers);
+//       }
+//       throw error;
+//     }
+//   };
 
 

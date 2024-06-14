@@ -17,6 +17,8 @@ import MySelectComponent from './pages/Sample';
 import MainHomePage from "./homepagetest/MainHomePage";
 import MainBoard from './homepagetest/board/MainBoard';
 import TestZustand from './homepagetest/testzustand/TestZustand';
+import LibTest from './homepagetest/libtest/LibTest';
+import ZustandInterface from './homepagetest/testzustand/ZustandInterface';
 
 const App = () => {
   return (
@@ -42,6 +44,9 @@ const App = () => {
           <Route path="/mainboard" element={<MainBoard/>}/>
           {/* zustand 연습 */}
           <Route path="/testzustand" element={<TestZustand/>}/>
+          {/* 라이브러리 테스트 */}
+          <Route path="/libtest" element={<LibTest/>}/>
+          <Route path="/zustandInterface" element={<ZustandInterface/>}/>
           {/* 홈페이지 만들기 예제 끝 */}
         </Routes>
       </LoginContextProvider>
