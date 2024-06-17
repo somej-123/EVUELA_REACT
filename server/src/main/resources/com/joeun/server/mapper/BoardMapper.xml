@@ -14,6 +14,7 @@
         <result property="contents" column="contents" />
         <result property="hitCnt" column="hit_cnt" />
         <result property="creatorId" column="creator_id" />
+        <result property="createdDatetime" column="created_datetime"/>
         <result property="updaterId" column="updater_id" />
         <result property="deletedYn" column="deleted_yn" />
 

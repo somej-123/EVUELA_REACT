@@ -19,6 +19,7 @@ import MainBoard from './homepagetest/board/MainBoard';
 import TestZustand from './homepagetest/testzustand/TestZustand';
 import LibTest from './homepagetest/libtest/LibTest';
 import ZustandInterface from './homepagetest/testzustand/ZustandInterface';
+import MainBoardWrite from './homepagetest/board/MainBoardWrite';
 
 const App = () => {
   return (
@@ -42,6 +43,7 @@ const App = () => {
           <Route path="/mainhomepage" element={<MainHomePage/>}/>
           {/* 게시판 만들기 */}
           <Route path="/mainboard" element={<MainBoard/>}/>
+          <Route path="/mainboardwrite" element={<MainBoardWrite/>}/>
           {/* zustand 연습 */}
           <Route path="/testzustand" element={<TestZustand/>}/>
           {/* 라이브러리 테스트 */}
